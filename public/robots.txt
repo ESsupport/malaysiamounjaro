@@ -8,3 +8,10 @@ Sitemap: https://malaysiamounjaro.com/sitemap.xml
 # Crawl-delay (optional, helps prevent server overload)
 Crawl-delay: 1
 
+# Favicon location
+User-agent: Googlebot
+Allow: /favicon.ico
+Allow: /favicon-16x16.png
+Allow: /favicon-32x32.png
+Allow: /apple-icon.png
+
