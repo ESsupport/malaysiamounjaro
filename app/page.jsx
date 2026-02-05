@@ -1,3 +1,6 @@
+"use client"
+
+import { useEffect } from "react"
 import { Header } from "@/components/header"
 import { Banner } from "@/components/banner"
 import { ProductGrid } from "@/components/product-grid"
@@ -13,6 +16,27 @@ import { WhatsAppFloat } from "@/components/whatsapp-float"
 import { ScrollToTop } from "@/components/scroll-to-top"
 
 export default function HomePage() {
+  useEffect(() => {
+    // Handle hash scrolling on page load
+    const hash = window.location.hash.slice(1)
+    if (hash) {
+      // Small delay to ensure page is rendered
+      setTimeout(() => {
+        const element = document.getElementById(hash)
+        if (element) {
+          const offset = 140 // Account for fixed header height
+          const elementPosition = element.getBoundingClientRect().top
+          const offsetPosition = elementPosition + window.pageYOffset - offset
+
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: "smooth"
+          })
+        }
+      }, 100)
+    }
+  }, [])
+
   return (
     <div className="min-h-screen">
       <Header />

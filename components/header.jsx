@@ -3,22 +3,51 @@
 import { useState } from "react"
 import Link from "next/link"
 import Image from "next/image"
+import { useRouter } from "next/navigation"
 import { WHATSAPP_CONFIG } from "@/lib/config"
+
+const STATES = [
+  { slug: 'sarawak', name: 'SARAWAK' },
+  { slug: 'sabah', name: 'SABAH' },
+  { slug: 'kl-klang-valley', name: 'KL-KLANG VALLEY' },
+  { slug: 'selangor', name: 'SELANGOR' },
+  { slug: 'johor', name: 'JOHOR' },
+  { slug: 'penang', name: 'PENANG' },
+  { slug: 'pahang', name: 'PAHANG' },
+  { slug: 'kelantan', name: 'KELANTAN' },
+  { slug: 'terengganu', name: 'TERENGGANU' },
+  { slug: 'perlis', name: 'PERLIS' },
+  { slug: 'negeri-sembilan', name: 'NEGERI SEMBILAN' },
+  { slug: 'kedah', name: 'KEDAH' },
+  { slug: 'melaka', name: 'MELAKA' },
+  { slug: 'perak', name: 'PERAK' },
+  { slug: 'labuan', name: 'LABUAN' },
+  { slug: 'putrajaya', name: 'PUTRAJAYA' }
+]
 
 export function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const [isStateDropdownOpen, setIsStateDropdownOpen] = useState(false)
+  const router = useRouter()
 
   const scrollToSection = (sectionId) => {
-    const element = document.getElementById(sectionId)
-    if (element) {
-      const offset = 140 // Account for fixed header height
-      const elementPosition = element.getBoundingClientRect().top
-      const offsetPosition = elementPosition + window.pageYOffset - offset
+    // Check if we're on the home page
+    if (window.location.pathname === '/') {
+      // On home page, scroll directly to section
+      const element = document.getElementById(sectionId)
+      if (element) {
+        const offset = 140 // Account for fixed header height
+        const elementPosition = element.getBoundingClientRect().top
+        const offsetPosition = elementPosition + window.pageYOffset - offset
 
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: "smooth"
-      })
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: "smooth"
+        })
+      }
+    } else {
+      // On other pages, navigate to home page with hash
+      router.push(`/#${sectionId}`)
     }
     // Close mobile menu after clicking
     setIsMobileMenuOpen(false)
@@ -90,6 +119,32 @@ export function Header() {
             >
               Get Consultation
             </button>
+            {/* State Dropdown */}
+            <div className="relative">
+              <button
+                onClick={() => setIsStateDropdownOpen(!isStateDropdownOpen)}
+                className="flex-1 md:flex-none px-4 py-4 text-white font-semibold hover:bg-purple-800 transition-colors text-sm md:text-base whitespace-nowrap capitalize flex items-center gap-1"
+              >
+                Choose State
+                <svg className={`w-4 h-4 transition-transform ${isStateDropdownOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              {isStateDropdownOpen && (
+                <div className="absolute top-full left-0 bg-white shadow-lg rounded-b-lg z-50 min-w-[200px] max-h-[400px] overflow-y-auto">
+                  {STATES.map((state) => (
+                    <Link
+                      key={state.slug}
+                      href={`/${state.slug}`}
+                      className="block px-4 py-2 text-gray-700 hover:bg-purple-100 hover:text-purple-800 transition-colors text-sm"
+                      onClick={() => setIsStateDropdownOpen(false)}
+                    >
+                      {state.name}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
           </div>
 
           {/* Mobile Hamburger Button */}
@@ -143,10 +198,24 @@ export function Header() {
               </button>
               <button
                 onClick={() => scrollToSection("consultation")}
-                className="w-full text-left text-white hover:bg-purple-600 px-4 py-3 transition-colors uppercase"
+                className="w-full text-left text-white hover:bg-purple-600 px-4 py-3 transition-colors border-b border-purple-600 uppercase"
               >
                 Get Consultation
               </button>
+              {/* Mobile State Links */}
+              <div className="border-t border-purple-500 pt-2">
+                <div className="px-4 py-2 text-purple-300 text-sm font-semibold">Choose State:</div>
+                {STATES.map((state) => (
+                  <Link
+                    key={state.slug}
+                    href={`/${state.slug}`}
+                    className="block w-full text-left text-white hover:bg-purple-600 px-4 py-2 transition-colors text-sm"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    {state.name}
+                  </Link>
+                ))}
+              </div>
             </div>
           )}
         </div>
