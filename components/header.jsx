@@ -125,7 +125,7 @@ export function Header() {
                 onClick={() => setIsStateDropdownOpen(!isStateDropdownOpen)}
                 className="flex-1 md:flex-none px-4 py-4 text-white font-semibold hover:bg-purple-800 transition-colors text-sm md:text-base whitespace-nowrap capitalize flex items-center gap-1"
               >
-                Choose State
+                Choose Location
                 <svg className={`w-4 h-4 transition-transform ${isStateDropdownOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                 </svg>
@@ -204,7 +204,7 @@ export function Header() {
               </button>
               {/* Mobile State Links */}
               <div className="border-t border-purple-500 pt-2">
-                <div className="px-4 py-2 text-purple-300 text-sm font-semibold">Choose State:</div>
+                <div className="px-4 py-2 text-purple-300 text-sm font-semibold">Choose Location:</div>
                 {STATES.map((state) => (
                   <Link
                     key={state.slug}
