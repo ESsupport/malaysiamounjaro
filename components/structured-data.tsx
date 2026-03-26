@@ -7,7 +7,7 @@ export function StructuredData() {
         "name": "Malaysia Mounjaro",
         "description": "FDA-approved Mounjaro KwikPen for safe and effective weight loss in Malaysia",
         "url": "https://malaysiamounjaro.com",
-        "telephone": "+60174483799",
+        "telephone": "+60167096799",
         "priceRange": "$$",
         "image": "https://malaysiamounjaro.com/banner/malaysia_mounjarro_banner.png",
         "address": {
