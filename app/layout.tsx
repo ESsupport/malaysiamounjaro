@@ -142,7 +142,7 @@ export default function RootLayout({
       <body className={`font-sans antialiased`}>
         {children}
         <Analytics />
-        <GoogleAnalytics measurementId="G-04MJNR2ZXC" />
+        <GoogleAnalytics measurementId="G-B8VBQ60S66" />
       </body>
     </html>
   )
