@@ -119,6 +119,12 @@ export function Header() {
             >
               Get Consultation
             </button>
+            <button
+              onClick={() => router.push("/foundayo")}
+              className="flex-1 md:flex-none px-4 py-4 text-white font-semibold hover:bg-purple-800 transition-colors text-sm md:text-base whitespace-nowrap capitalize"
+            >
+              Foundayo
+            </button>
             {/* State Dropdown */}
             <div className="relative">
               <button

@@ -3,12 +3,12 @@ import { Header } from '@/components/header'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Foundayo - Coming Soon | Malaysia Tirzepatide',
-  description: 'Foundayo is coming soon. Stay tuned for exciting updates from Malaysia Tirzepatide.',
+  title: 'Foundayo (Orforglipron) - Oral GLP-1 Weight Loss | Malaysia Tirzepatide',
+  description: 'Foundayo (orforglipron) is an oral GLP-1 receptor agonist by Eli Lilly for obesity treatment. FDA approved April 2026. No fasting required.',
   openGraph: {
-    title: 'Foundayo - Coming Soon',
-    description: 'Foundayo is coming soon. Stay tuned for exciting updates.',
-    images: ['/foundayo/foundayo.jpeg'],
+    title: 'Foundayo (Orforglipron) - Oral GLP-1 Weight Loss',
+    description: 'Foundayo is an oral GLP-1 medication for weight loss. No fasting required, daily oral dose.',
+    images: ['/foundayo/FOUNDAYO-BOTTLE-0.8MG.jpg'],
   },
 }
 
@@ -18,23 +18,23 @@ export default function FoundayoPage() {
       <Header />
       <div className="min-h-screen bg-gradient-to-br from-purple-50 to-pink-50">
         <div className="container mx-auto px-4 py-16">
-          {/* Coming Soon Header */}
+          {/* Header */}
           <div className="text-center mb-12">
             <h1 className="text-5xl md:text-6xl font-bold text-purple-800 mb-4">
-              Coming Soon
+              Foundayo
             </h1>
             <p className="text-xl text-gray-600">
-              Something exciting is on the way!
+              Oral GLP-1 Receptor Agonist (Orforglipron)
             </p>
           </div>
 
           {/* Main Image */}
           <div className="flex justify-center mb-12">
-            <div className="relative w-full max-w-4xl">
+            <div className="relative w-full max-w-md">
               <Image
-                src="/foundayo/foundayo.jpeg"
-                alt="Foundayo - Coming Soon"
-                width={1200}
+                src="/foundayo/FOUNDAYO-BOTTLE-0.8MG.jpg"
+                alt="Foundayo 0.8mg Bottle"
+                width={600}
                 height={800}
                 className="rounded-lg shadow-2xl object-cover"
                 priority
@@ -42,11 +42,139 @@ export default function FoundayoPage() {
             </div>
           </div>
 
-          {/* Additional Info */}
-          <div className="text-center max-w-2xl mx-auto">
-            <p className="text-lg text-gray-700 mb-8">
-              We're working on something special. Check back soon for updates!
-            </p>
+          {/* English Content */}
+          <div className="max-w-4xl mx-auto mb-16">
+            <div className="bg-white rounded-xl shadow-lg p-8">
+              <h2 className="text-3xl font-bold text-purple-800 mb-6">About Foundayo</h2>
+              <p className="text-gray-700 mb-6 leading-relaxed">
+                Foundayo (Generic name: orforglipron) is an oral, small-molecule, non-peptide GLP-1 receptor agonist developed by Eli Lilly. It is primarily used to treat obesity and adult patients with weight-related comorbidities. Approved by the US FDA in April 2026, it marks a significant shift in the weight loss market from injectables to more convenient oral medications.
+              </p>
+
+              <h3 className="text-2xl font-bold text-purple-700 mb-4">1. Core Advantages and Features</h3>
+              <ul className="space-y-3 mb-6">
+                <li className="flex items-start">
+                  <span className="text-purple-500 mr-2">•</span>
+                  <span><strong>No Fasting Required:</strong> Foundayo is currently the only oral GLP-1 medication that does not require fasting and is not restricted by food or water intake; patients can take it flexibly at any time of the day.</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-purple-500 mr-2">•</span>
+                  <span><strong>Daily Oral Dose:</strong> Its small-molecule structure removes the limitations of traditional peptide GLP-1s, which require injections or strict fasting protocols.</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-purple-500 mr-2">•</span>
+                  <span><strong>Significant Efficacy:</strong> Clinical trial data showed that over a 72-week period, patients taking Foundayo achieved an average weight loss of 12.4% (approximately 27.3 lbs).</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-purple-500 mr-2">•</span>
+                  <span><strong>Cardiovascular Benefits:</strong> Research indicates the drug helps improve cardiovascular data, reducing the risk of cardiovascular events by 16%.</span>
+                </li>
+              </ul>
+
+              <h3 className="text-2xl font-bold text-purple-700 mb-4">2. Mechanism of Action and Background</h3>
+              <p className="text-gray-700 mb-6 leading-relaxed">
+                The active ingredient, orforglipron, was originally developed by Japan's Chugai Pharmaceutical, with Eli Lilly acquiring the development and marketing rights. As a non-peptide small molecule, it suppresses appetite and increases satiety by directly activating GLP-1 receptors, while its unique chemical structure offers superior convenience.
+              </p>
+
+              <h3 className="text-2xl font-bold text-purple-700 mb-4">3. Market Launch</h3>
+              <p className="text-gray-700 mb-6 leading-relaxed">
+                <strong>Launch Date:</strong> Received US FDA approval in early April 2026.
+              </p>
+
+              <h3 className="text-2xl font-bold text-purple-700 mb-4">4. Market Position and Competition</h3>
+              <p className="text-gray-700 leading-relaxed">
+                The launch of Foundayo is seen as Eli Lilly's heavy-hitting weapon in the obesity sector to compete with Novo Nordisk, directly rivaling the oral version of Wegovy (semaglutide).
+              </p>
+            </div>
+          </div>
+
+          {/* Chinese Content */}
+          <div className="max-w-4xl mx-auto mb-16">
+            <div className="bg-white rounded-xl shadow-lg p-8">
+              <h2 className="text-3xl font-bold text-purple-800 mb-6">关于 Foundayo</h2>
+              <p className="text-gray-700 mb-6 leading-relaxed">
+                Foundayo（通用名：orforglipron）是礼来公司（Eli Lilly）研发的一款口服、小分子、非肽类GLP-1受体激动剂，主要用于治疗肥胖症及伴有体重相关合并症的成人患者。该药物于2026年4月获得美国FDA批准上市，标志着减肥药市场从注射剂向更便捷的口服药转型。
+              </p>
+
+              <h3 className="text-2xl font-bold text-purple-700 mb-4">1. 核心优势与特点</h3>
+              <ul className="space-y-3 mb-6">
+                <li className="flex items-start">
+                  <span className="text-purple-500 mr-2">•</span>
+                  <span><strong>无需空腹，不受饮食/水分限制：</strong> Foundayo是目前唯一一款无需空腹服用、且不受饮食或水分限制的口服GLP-1药物，患者可在一天中任何时间灵活服药。</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-purple-500 mr-2">•</span>
+                  <span><strong>每日一次口服：</strong> 小分子结构使其摆脱了传统肽类GLP-1需要注射或严格空腹服用的限制。</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-purple-500 mr-2">•</span>
+                  <span><strong>疗效显著：</strong> 临床试验数据显示，在为期72周的临床试验中，服用Foundayo的患者平均减重12.4%（约27.3磅）。</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-purple-500 mr-2">•</span>
+                  <span><strong>心血管益处：</strong> 研究显示，该药物有助于改善心血管数据，能将心血管事件风险降低16%。</span>
+                </li>
+              </ul>
+
+              <h3 className="text-2xl font-bold text-purple-700 mb-4">2. 作用机理与研发背景</h3>
+              <p className="text-gray-700 mb-6 leading-relaxed">
+                Foundayo的活性成分orforglipron最初由日本中外制药研发，礼来通过合作获得该药物的开发和销售权。它是一种非肽类小分子，通过直接激活GLP-1受体来抑制食欲和增加饱腹感，但其独特的化学结构提供了更高的便利性。
+              </p>
+
+              <h3 className="text-2xl font-bold text-purple-700 mb-4">3. 上市</h3>
+              <p className="text-gray-700 mb-6 leading-relaxed">
+                <strong>上市时间：</strong> 2026年4月初获得美国FDA批准。
+              </p>
+
+              <h3 className="text-2xl font-bold text-purple-700 mb-4">4. 市场地位与竞争</h3>
+              <p className="text-gray-700 leading-relaxed">
+                Foundayo的上市被视为礼来在肥胖症领域应对诺和诺德（Novo Nordisk）竞争的重磅武器，直接对标口服版Wegovy（司美格鲁肽）。
+              </p>
+            </div>
+          </div>
+
+          {/* Malay Content */}
+          <div className="max-w-4xl mx-auto mb-16">
+            <div className="bg-white rounded-xl shadow-lg p-8">
+              <h2 className="text-3xl font-bold text-purple-800 mb-6">Mengenai Foundayo</h2>
+              <p className="text-gray-700 mb-6 leading-relaxed">
+                Foundayo (Nama generik: orforglipron) adalah perangsang reseptor GLP-1 jenis molekul kecil, bukan peptida, dan diambil secara oral yang dibangunkan oleh Eli Lilly. Ia digunakan terutamanya untuk merawat obesiti serta pesakit dewasa yang mempunyai komorbiditi berkaitan berat badan. Kelulusan daripada FDA Amerika Syarikat pada April 2026 menandakan transformasi pasaran ubat kurus daripada jenis suntikan kepada ubat oral yang lebih mudah.
+              </p>
+
+              <h3 className="text-2xl font-bold text-purple-700 mb-4">1. Kelebihan Utama dan Ciri-ciri</h3>
+              <ul className="space-y-3 mb-6">
+                <li className="flex items-start">
+                  <span className="text-purple-500 mr-2">•</span>
+                  <span><strong>Tanpa Perlu Puasa:</strong> Foundayo merupakan satu-satunya ubat GLP-1 oral setakat ini yang tidak memerlukan perut kosong dan tidak terikat dengan sekatan makanan atau air; pesakit boleh mengambilnya secara fleksibel pada bila-bila masa sepanjang hari.</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-purple-500 mr-2">•</span>
+                  <span><strong>Pengambilan Oral Sekali Sehari:</strong> Struktur molekul kecilnya membolehkan ia mengatasi had ubat GLP-1 peptida tradisional yang memerlukan suntikan atau protokol puasa yang ketat.</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-purple-500 mr-2">•</span>
+                  <span><strong>Keberkesanan Ketara:</strong> Data ujian klinikal menunjukkan bahawa dalam tempoh ujian 72 minggu, pesakit yang mengambil Foundayo mencapai purata penurunan berat badan sebanyak 12.4% (kira-kira 27.3 paun).</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-purple-500 mr-2">•</span>
+                  <span><strong>Manfaat Kardiovaskular:</strong> Kajian menunjukkan ubat ini membantu meningkatkan data kardiovaskular dan mampu mengurangkan risiko kejadian kardiovaskular sebanyak 16%.</span>
+                </li>
+              </ul>
+
+              <h3 className="text-2xl font-bold text-purple-700 mb-4">2. Mekanisme Bertindak dan Latar Belakang</h3>
+              <p className="text-gray-700 mb-6 leading-relaxed">
+                Bahan aktif orforglipron pada asalnya dibangunkan oleh Chugai Pharmaceutical dari Jepun, manakala Eli Lilly memperoleh hak pembangunan dan jualan melalui kerjasama. Ia merupakan molekul kecil bukan peptida yang menyekat selera makan dan meningkatkan rasa kenyang dengan mengaktifkan reseptor GLP-1 secara langsung, di mana struktur kimianya yang unik memberikan kemudahan yang lebih tinggi.
+              </p>
+
+              <h3 className="text-2xl font-bold text-purple-700 mb-4">3. Pelancaran Pasaran</h3>
+              <p className="text-gray-700 mb-6 leading-relaxed">
+                <strong>Masa Pelancaran:</strong> Mendapat kelulusan FDA AS pada awal April 2026.
+              </p>
+
+              <h3 className="text-2xl font-bold text-purple-700 mb-4">4. Kedudukan Pasaran dan Persaingan</h3>
+              <p className="text-gray-700 leading-relaxed">
+                Pelancaran Foundayo dilihat sebagai senjata utama Eli Lilly dalam bidang obesiti untuk bersaing dengan Novo Nordisk, secara langsung mencabar Wegovy (semaglutide) versi oral.
+              </p>
+            </div>
           </div>
 
           {/* Back to Home */}
