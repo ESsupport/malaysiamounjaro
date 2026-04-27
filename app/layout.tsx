@@ -3,6 +3,8 @@ import { Geist, Geist_Mono } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import { StructuredData } from '@/components/structured-data'
 import { GoogleAnalytics } from '@/components/google-analytics'
+import { WhatsAppFloat } from '@/components/whatsapp-float'
+import { ScrollToTop } from '@/components/scroll-to-top'
 import './globals.css'
 
 const _geist = Geist({ subsets: ["latin"] });
@@ -141,6 +143,8 @@ export default function RootLayout({
       </head>
       <body className={`font-sans antialiased`}>
         {children}
+        <ScrollToTop />
+        <WhatsAppFloat />
         <Analytics />
         <GoogleAnalytics measurementId="G-B8VBQ60S66" />
       </body>

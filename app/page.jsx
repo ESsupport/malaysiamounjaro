@@ -12,8 +12,6 @@ import { ConsultationCTA } from "@/components/consultation-cta"
 import { Footer } from "@/components/footer"
 import { AboutProductChinese } from "@/components/about-product-chinese"
 import { AboutProductMalay } from "@/components/about-product-malay"
-import { WhatsAppFloat } from "@/components/whatsapp-float"
-import { ScrollToTop } from "@/components/scroll-to-top"
 
 export default function HomePage() {
   useEffect(() => {
@@ -75,10 +73,6 @@ export default function HomePage() {
         {/* Footer */}
         <Footer />
       </main>
-
-      {/* Floating Buttons */}
-      <ScrollToTop />
-      <WhatsAppFloat />
     </div>
   )
 }
