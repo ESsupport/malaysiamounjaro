@@ -5,6 +5,7 @@ import { WHATSAPP_CONFIG } from '@/lib/config'
 
 // State mapping configuration
 const stateMapping: Record<string, { name: string; imageFile: string }> = {
+  'singapore': { name: 'SINGAPORE', imageFile: 'SINGAPORE-MOUNJARO.jpg' },
   'sarawak': { name: 'SARAWAK', imageFile: 'SARAWAK-MOUNJARO.jpg' },
   'sabah': { name: 'SABAH', imageFile: 'SABAH-MOUNJARO.jpg' },
   'kl-klang-valley': { name: 'KL-KLANG VALLEY', imageFile: 'KLANG VALLEY-KL-SELANGOR-MOUNJARO.jpg' },

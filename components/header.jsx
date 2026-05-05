@@ -7,6 +7,7 @@ import { useRouter } from "next/navigation"
 import { WHATSAPP_CONFIG } from "@/lib/config"
 
 const STATES = [
+  { slug: 'singapore', name: 'SINGAPORE' },
   { slug: 'sarawak', name: 'SARAWAK' },
   { slug: 'sabah', name: 'SABAH' },
   { slug: 'kl-klang-valley', name: 'KL-KLANG VALLEY' },
